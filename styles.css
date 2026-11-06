@@ -369,3 +369,28 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Programmering i skolen – kort introduksjon på forsiden */
+.school-intro { background: #fffdf7; border-bottom: 1px solid #e8e9df; }
+.school-intro-top { display:grid; grid-template-columns:1.12fr .88fr; gap:65px; align-items:end; margin-bottom:38px; }
+.school-intro h2 {font-size:clamp(38px,4.6vw,61px);line-height:1.09;letter-spacing:-2.5px;margin:0;font-weight:850;}
+.school-intro h2 em {font-family:Georgia,serif;font-weight:400;}
+.school-intro-lead p {font-size:15px;line-height:1.83;color:#516259;margin:0 0 13px;}
+.school-read-link {display:inline-flex;gap:18px;color:#124b40;font-size:13px;font-weight:850;border-bottom:2px solid #d7a74f;padding:9px 0;}
+.school-intro-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.school-minicard {background:#f1f4ec;border:1px solid #dfe7d9;border-radius:16px;padding:28px 25px;display:flex;flex-direction:column;min-height:242px;}
+.school-minicard:nth-child(2){background:#f8efda;border-color:#eee2c8}
+.school-minicard:nth-child(3){background:#eaf0f5;border-color:#dce7f1}
+.school-card-num{font-size:10px;letter-spacing:1.5px;font-weight:850;color:#5a6c62}
+.school-card-icon {font-size:28px;margin:14px 0 4px;color:#397264;}
+.school-minicard h3 {margin:0 0 9px;font-size:21px;letter-spacing:-.5px}
+.school-minicard p {font-size:13px;color:#54655e;line-height:1.68;margin:0 0 20px;flex:1}
+.school-minicard a {font-weight:850;font-size:11px;color:#275448;text-decoration:underline;text-underline-offset:4px;}
+.school-intro-note{display:flex;align-items:center;justify-content:space-between;gap:28px;background:#133f39;color:#f4f7f0;border-radius:16px;padding:25px 30px;margin-top:18px;}
+.school-intro-note div{display:flex;flex-direction:column;gap:5px}
+.school-intro-note strong{font-size:16px;}
+.school-intro-note span{font-size:12px;line-height:1.6;color:#c7d9cf}
+.school-note-button{flex:0 0 auto;padding:13px 17px;background:#f4d874;color:#1b342e;border-radius:9px;font-size:12px;font-weight:850;}
+@media(max-width:830px){.school-intro-top {grid-template-columns:1fr;gap:17px}.school-intro-grid{gap:10px}.school-minicard{padding:22px 17px}.school-minicard h3{font-size:18px}.school-intro-note{align-items:start;flex-direction:column}}
+@media(max-width:650px){.school-intro h2{font-size:clamp(34px,9vw,47px);letter-spacing:-1.5px}.school-intro-grid{grid-template-columns:1fr}.school-minicard{min-height:0}.school-intro-note{padding:22px}.school-note-button{width:100%;text-align:center}}
