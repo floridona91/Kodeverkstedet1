@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103d39">
+  <meta name="description" content="Kodeverkstedet: oppgaver i analog programmering, Scratch og Python – fra de første algoritmene til egne prosjekter.">
+  <title>Kodeverkstedet – Fra idé til kode</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="oppgaver.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#hovedinnhold">Hopp til innhold</a>
+  <header class="site-header">
+    <div class="wrap topbar">
+      <a class="brand" href="#toppen" aria-label="Kodeverkstedet, til forsiden">
+        <span class="brand-symbol" aria-hidden="true">{<span class="brand-star">✳</span>}</span>
+        <span>kode<span class="brand-highlight">verkstedet</span><span class="brand-dot">.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Hovedmeny">
+        <a href="#arbeidsmater">Tre måter å lære</a>
+        <a href="#oppgaver">Oppgaver</a>
+        <a href="#for-laerere">For lærere</a>
+      </nav>
+      <a href="#oppgaver" class="header-cta">Finn en oppgave <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="hovedinnhold">
+    <section class="hero" id="toppen" aria-labelledby="hero-heading">
+      <div class="hero-background-spot hero-background-spot-one" aria-hidden="true"></div>
+      <div class="hero-background-spot hero-background-spot-two" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow"><span class="eyebrow-dot"></span> ET STED Å UTFORSKE PROGRAMMERING</p>
+          <h1 id="hero-heading">Fra nysgjerrig<br>til <span class="hero-italic">kodeklok.</span></h1>
+          <p class="hero-lead">Lær å tenke som en programmerer – først uten skjerm, så med Scratch, og til slutt med Python.</p>
+          <div class="hero-actions">
+            <a href="#oppgaver" class="button button-yellow">Utforsk oppgaver <span aria-hidden="true">↗</span></a>
+            <a href="#arbeidsmater" class="button button-ghost">Slik kommer du i gang <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-footnote"><span class="hero-footnote-check" aria-hidden="true">✓</span> Gratis oppgaver &nbsp; <span class="hero-footnote-check" aria-hidden="true">✓</span> Ingen innlogging</p>
+        </div>
+        <div class="hero-art" aria-label="Et eksempel på hvordan samme idé kan brukes i analog programmering, Scratch og Python">
+          <div class="hero-art-deco hero-art-deco-a" aria-hidden="true">✳</div>
+          <div class="hero-art-deco hero-art-deco-b" aria-hidden="true">+</div>
+          <div class="showcase-card">
+            <div class="showcase-top"><span class="showcase-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>EN IDÉ, MANGE MULIGHETER</span><span class="showcase-top-glyph" aria-hidden="true">↗</span></div>
+            <div class="showcase-title">Få noe til å bevege seg!</div>
+            <div class="showcase-row">
+              <div class="showcase-row-icon analog-icon" aria-hidden="true">↱</div>
+              <div class="showcase-row-text"><strong>01 / ANALOG</strong><span>Ta 2 steg → Snu til høyre</span></div>
+              <span class="showcase-tag">uten skjerm</span>
+            </div>
+            <div class="showcase-row">
+              <div class="showcase-row-icon scratch-icon" aria-hidden="true">◈</div>
+              <div class="showcase-row-text"><strong>02 / SCRATCH</strong><span class="scratch-mini"><span>når <b>⚑</b> klikkes</span><span>gå 10 steg</span></span></div>
+              <span class="showcase-tag">blokker</span>
+            </div>
+            <div class="showcase-row showcase-row-last">
+              <div class="showcase-row-icon python-icon" aria-hidden="true">&lt;/&gt;</div>
+              <div class="showcase-row-text"><strong>03 / PYTHON</strong><code>for steg in range(2):</code><code>&nbsp;&nbsp;&nbsp;&nbsp;print("Gå!")</code></div>
+              <span class="showcase-tag">tekst</span>
+            </div>
+            <div class="showcase-bottom"><span class="showcase-spark" aria-hidden="true">✦</span> Samme tankegang. Nye verktøy.</div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap hero-bottom"><span>UTFORSK · PRØV · FEIL · LÆR</span><span>ALGORITMER BEGYNNER MED EN IDÉ <span aria-hidden="true">↗</span></span></div>
+    </section>
+
+    <section class="intro section-padding" id="arbeidsmater" aria-labelledby="ways-title">
+      <div class="wrap">
+        <div class="section-heading section-heading-split">
+          <div><p class="eyebrow eyebrow-dark"><span class="eyebrow-spark" aria-hidden="true">✳</span> TRE VEIER INN</p><h2 id="ways-title">Tre måter å <em>tenke kode.</em></h2></div>
+          <p>Du trenger ikke kunne noe fra før. Velg en måte å jobbe på, og begynn med en oppgave som passer deg.</p>
+        </div>
+        <div class="path-grid">
+          <article class="path-card path-analog">
+            <div class="path-top"><span class="path-num">01 / UTEN SKJERM</span><span class="path-corner" aria-hidden="true">↗</span></div>
+            <div class="path-art analog-art" aria-hidden="true"><div class="analog-grid"><span>↑</span><span>↑</span><span>↱</span><span>→</span><span>●</span><span>→</span></div><span class="path-art-star">✦</span></div>
+            <h3>Analog <span>programmering</span></h3>
+            <p>Gi instruksjoner, finn mønstre og løs problemer – med papir, bevegelse og samarbeid.</p>
+            <button class="path-action" type="button" data-select-form="analog">Se analoge oppgaver <span aria-hidden="true">↗</span></button>
+          </article>
+          <article class="path-card path-scratch">
+            <div class="path-top"><span class="path-num">02 / MED BLOKKER</span><span class="path-corner" aria-hidden="true">↗</span></div>
+            <div class="path-art blocks-art" aria-hidden="true"><div class="block-piece block-yellow">⚑ når flagget klikkes</div><div class="block-piece block-blue">gå 10 steg</div><div class="block-piece block-purple">si «Hei!» i 2 sek.</div><span class="path-art-star">✳</span></div>
+            <h3>Scratch <span>programmering</span></h3>
+            <p>Dra og sett sammen fargerike blokker for å lage animasjoner, historier og spill.</p>
+            <button class="path-action" type="button" data-select-form="scratch">Se Scratch-oppgaver <span aria-hidden="true">↗</span></button>
+          </article>
+          <article class="path-card path-python">
+            <div class="path-top"><span class="path-num">03 / MED TEKST</span><span class="path-corner" aria-hidden="true">↗</span></div>
+            <div class="path-art code-art" aria-hidden="true"><div class="code-art-window"><div><i></i><i></i><i></i></div><code><span>navn</span> = <span class="code-light">"Deg"</span><br><span class="code-pink">print</span>(<span class="code-light">"Hei, "</span> + navn)<br><span class="code-comment"># Du klarte det! ✨</span></code></div><span class="path-art-star">✧</span></div>
+            <h3>Python <span>programmering</span></h3>
+            <p>Skriv kode med egne ord og tegn. Lag små programmer som gjør akkurat det du ber om.</p>
+            <button class="path-action" type="button" data-select-form="python">Se Python-oppgaver <span aria-hidden="true">↗</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-strip" aria-labelledby="how-title">
+      <div class="wrap how-layout"><div class="how-label"><span class="how-spark" aria-hidden="true">✳</span><h2 id="how-title">Slik gjør du det</h2></div><ol class="how-steps"><li><span>1</span> Velg en oppgave</li><li><span>2</span> Les instruksjonene</li><li><span>3</span> Prøv og utforsk</li><li><span>4</span> Marker som fullført</li></ol></div>
+    </section>
+
+    <section class="tasks-section section-padding" id="oppgaver" aria-labelledby="tasks-title">
+      <div class="wrap">
+        <div class="section-heading tasks-heading"><div><p class="eyebrow eyebrow-dark"><span class="eyebrow-spark" aria-hidden="true">✳</span> DIN NESTE UTFORDRING</p><h2 id="tasks-title">Oppgaver for <em>kloke hoder.</em></h2><p>Små og store utfordringer. Finn noe som passer – og prøv deg frem!</p></div><div class="progress-box" aria-live="polite"><div class="progress-top"><span>DIN FREMGANG</span><strong id="progress-text">0 / 12</strong></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><span class="progress-caption">Lagres bare i denne nettleseren</span></div></div>
+        <div class="filter-panel" aria-label="Filtrer oppgaver"><div class="filter-tabs" role="group" aria-label="Velg programmeringsmåte"><button type="button" class="filter-tab is-active" data-filter-form="alle" aria-pressed="true">Alle oppgaver</button><button type="button" class="filter-tab" data-filter-form="analog" aria-pressed="false">Analog</button><button type="button" class="filter-tab" data-filter-form="scratch" aria-pressed="false">Scratch</button><button type="button" class="filter-tab" data-filter-form="python" aria-pressed="false">Python</button></div><div class="filter-controls"><label class="search-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span class="sr-only">Søk etter oppgaver</span><input id="task-search" type="search" placeholder="Søk etter oppgaver…" autocomplete="off"></label><label class="level-box"><span class="sr-only">Velg vanskelighetsgrad</span><select id="task-level"><option value="alle">Alle nivåer</option><option value="nybegynner">Nybegynner</option><option value="videre">Litt øvet</option><option value="utfordring">Utfordring</option></select></label></div></div>
+        <div class="results-line" aria-live="polite"><span id="results-count">Viser 12 oppgaver</span><button type="button" id="clear-filters" class="text-reset" hidden>Nullstill filtre ↺</button></div>
+        <div id="task-grid" class="task-grid"></div>
+        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">⌁</span><h3>Ingen oppgaver funnet</h3><p>Prøv et annet søk eller velg et annet nivå.</p><button type="button" class="button button-dark" id="empty-clear">Vis alle oppgaver</button></div>
+      </div>
+    </section>
+
+    <section class="teacher-section section-padding" id="for-laerere" aria-labelledby="teachers-title"><div class="wrap teacher-grid"><div class="teacher-copy"><p class="eyebrow eyebrow-dark"><span class="eyebrow-spark" aria-hidden="true">✳</span> FOR LÆRERE</p><h2 id="teachers-title">Laget for <em>undervisning.</em><br>Åpent for utforsking.</h2><p>Bruk oppgavene i timen, eller la elevene jobbe i sitt eget tempo. Alle oppgavene har tydelige steg, læringsmål og en ekstra utfordring.</p><div class="teacher-points"><div><span aria-hidden="true">✓</span> Oppgaver i tre arbeidsformer</div><div><span aria-hidden="true">✓</span> Enkelt å endre og legge til oppgaver</div><div><span aria-hidden="true">✓</span> Ingen elevkonto eller personopplysninger</div></div><p class="teacher-small">Vil du lage egne oppgaver? Bruk <a href="admin.html" style="font-weight:800; text-decoration:underline; text-underline-offset:3px">Lærerrommet ↗</a> for å redigere med et enkelt skjema. Endringene publiseres via GitHub.</p></div><div class="teacher-visual" aria-hidden="true"><div class="teacher-paper"><div class="teacher-paper-head"><span>MIN UNDERVISNINGSPLAN</span><span>✳</span></div><div class="teacher-paper-title">Lær gjennom<br><em>å gjøre.</em></div><div class="teacher-paper-line"><span class="paper-check">✓</span><span>Utforsk algoritmer</span><span>15 MIN</span></div><div class="teacher-paper-line"><span class="paper-check">✓</span><span>Lag noe i Scratch</span><span>30 MIN</span></div><div class="teacher-paper-line"><span class="paper-check">○</span><span>Skriv din første Python-kode</span><span>20 MIN</span></div><div class="teacher-paper-doodle">↗</div></div><span class="teacher-visual-sticker">LÆRING<br>SKJER HER! <span>★</span></span></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-main"><div><a class="brand brand-footer" href="#toppen"><span class="brand-symbol" aria-hidden="true">{<span class="brand-star">✳</span>}</span><span>kode<span class="brand-highlight">verkstedet</span><span class="brand-dot">.</span></span></a><p>Små steg. Store ideer. Masse læring.</p></div><div class="footer-links"><a href="#arbeidsmater">Arbeidsmåter</a><a href="#oppgaver">Oppgaver</a><a href="#for-laerere">For lærere</a><a href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener noreferrer">Åpne Scratch ↗</a></div></div><div class="wrap footer-bottom"><span>© <span id="footer-year">2026</span> Kodeverkstedet · Laget for nysgjerrige elever</span><span>Designet for å prøve, feile og lære <span aria-hidden="true">✳</span></span></div></footer>
+
+  <dialog id="task-dialog" aria-labelledby="dialog-title" class="task-dialog"><div class="dialog-inner"><div id="dialog-content"></div></div></dialog>
+  <div class="sr-only" role="status" aria-live="polite" id="action-announcement"></div>
+</body>
+</html>

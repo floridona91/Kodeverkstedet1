@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143c35">
+  <meta name="description" content="Lærerrommet for Kodeverkstedet: lag, rediger og organiser programmeringsoppgaver uten å skrive kode.">
+  <title>Lærerrommet – Kodeverkstedet</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="oppgaver.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#arbeidsomrade">Hopp til oppgaveeditoren</a>
+  <header class="topbar">
+    <div class="page-width topbar-inner">
+      <a href="index.html" class="brand"><span class="brand-symbol" aria-hidden="true">{✳}</span> kode<span class="brand-soft">verkstedet</span><span class="brand-period">.</span></a>
+      <span class="room-chip">LÆRERROMMET</span>
+      <a class="student-link" href="index.html" target="_blank" rel="noopener">Se elevsiden <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="page-width hero-inner">
+        <div>
+          <p class="eyebrow"><span aria-hidden="true">✳</span> DIN EGEN OPPGAVEBANK</p>
+          <h1 id="page-title">Lag gode oppgaver.<br><em>Helt uten kode.</em></h1>
+          <p>Her kan du opprette, endre, kopiere og slette oppgaver i analog programmering, Scratch og Python. Fyll inn feltene – vi lager filen for deg.</p>
+        </div>
+        <div class="hero-note" aria-label="Tre steg for å publisere">
+          <span class="hero-note-label">SLIK FUNGERER DET</span>
+          <div><span class="step-circle">1</span><span><strong>Rediger</strong><small>Lag oppgaver med skjemaet</small></span></div>
+          <div><span class="step-circle">2</span><span><strong>Last ned</strong><small>Få en ferdig oppgavefil</small></span></div>
+          <div><span class="step-circle">3</span><span><strong>Publiser</strong><small>Erstatt filen i GitHub</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-width workspace" id="arbeidsomrade">
+      <div class="save-note" role="status" aria-live="polite">
+        <span class="save-dot" aria-hidden="true"></span>
+        <span id="save-status">Laster oppgaver …</span>
+        <span class="save-explain">Endringer her vises ikke hos elevene før du publiserer.</span>
+      </div>
+      <div class="workspace-grid">
+        <aside class="task-panel" aria-label="Oversikt over oppgaver">
+          <div class="panel-heading">
+            <div><p class="panel-overline">MIN SAMLING</p><h2>Oppgaver <span id="task-count" class="count-pill">0</span></h2></div>
+            <button type="button" id="new-task" class="add-button" aria-label="Lag ny oppgave">+ Ny</button>
+          </div>
+          <label class="search-shell"><span aria-hidden="true">⌕</span><input id="task-search" type="search" placeholder="Søk etter oppgaver …" aria-label="Søk etter oppgaver"></label>
+          <div class="filter-tabs" aria-label="Filtrer oppgaver">
+            <button type="button" data-filter="alle" aria-pressed="true" class="selected">Alle</button>
+            <button type="button" data-filter="analog" aria-pressed="false">Analog</button>
+            <button type="button" data-filter="scratch" aria-pressed="false">Scratch</button>
+            <button type="button" data-filter="python" aria-pressed="false">Python</button>
+          </div>
+          <div class="task-list" id="task-list" aria-label="Velg en oppgave"></div>
+          <p class="task-panel-foot">Velg en oppgave for å redigere den, eller trykk <strong>+ Ny</strong>.</p>
+        </aside>
+
+        <section class="editor-panel" aria-labelledby="editor-title">
+          <div id="editor-content"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page-width publish-section" id="publiser" aria-labelledby="publish-title">
+      <div class="publish-header"><div><p class="panel-overline">NÅR DU ER FORNØYD</p><h2 id="publish-title">Gjør oppgavene <em>synlige for elevene.</em></h2><p>Du trenger ikke endre programkode. Nettsiden er statisk, så du laster ned en ferdig fil og legger den i GitHub.</p></div><span class="publish-deco" aria-hidden="true">↗</span></div>
+      <div class="publish-grid">
+        <article class="publish-card publish-primary">
+          <span class="publish-number">01 / FÅ FILEN</span>
+          <h3>Last ned oppgavene</h3>
+          <p>Vi lager filen <code>oppgaver.js</code> med alle oppgavene slik du har redigert dem.</p>
+          <button id="download-publish" type="button" class="button button-dark">↓ Last ned oppgaver.js</button>
+          <p class="secondary-caption">Filen lastes ned på din datamaskin. Dette publiserer ikke automatisk.</p>
+        </article>
+        <article class="publish-card">
+          <span class="publish-number">02 / OPPDATER GITHUB</span>
+          <h3>Bytt ut den gamle filen</h3>
+          <ol>
+            <li>Åpne ditt <strong>kodeverkstedet</strong>-prosjekt på <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub ↗</a>.</li>
+            <li>Velg <strong>Add file → Upload files</strong> og last opp den nye <code>oppgaver.js</code>.</li>
+            <li>Bekreft endringen med <strong>Commit changes</strong>.</li>
+          </ol>
+          <details><summary>Hvis GitHub ikke lar deg erstatte filen</summary><p>Åpne <code>oppgaver.js</code> i GitHub, klikk blyanten, trykk Ctrl+A / Cmd+A i editoren og lim inn innholdet fra knappen nedenfor. Lagre med <strong>Commit changes</strong>. Du trenger ikke å skrive eller forstå koden.</p><button type="button" id="copy-publish" class="button button-outline">⧉ Kopier hele filinnholdet</button></details>
+        </article>
+        <article class="publish-card">
+          <span class="publish-number">03 / FERDIG</span>
+          <h3>Sjekk elevsiden</h3>
+          <p>Etter at GitHub Pages har publisert endringen, åpner du elevsiden og oppdaterer nettleseren.</p>
+          <a href="index.html" target="_blank" rel="noopener" class="button button-outline">Se elevsiden ↗</a>
+          <p class="secondary-caption">Del den vanlige elevlenken – ikke adressen til <code>admin.html</code>.</p>
+        </article>
+      </div>
+      <div id="publish-message" class="publish-message" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="page-width backup-section" aria-labelledby="backup-title">
+      <div><p class="panel-overline">TRYGG LAGRING</p><h2 id="backup-title">Ta vare på arbeidet ditt</h2><p>Utkast lagres automatisk <strong>kun i nettleseren på denne enheten</strong>. Bruk en sikkerhetskopi hvis du vil fortsette på en annen PC eller hvis nettleserdata kan bli slettet.</p></div>
+      <div class="backup-actions"><button id="download-backup" type="button" class="button button-outline">↓ Last ned sikkerhetskopi (.json)</button><button id="upload-backup" type="button" class="button button-outline">↑ Åpne sikkerhetskopi</button><input id="backup-input" type="file" accept=".json,application/json" hidden><button id="restore-published" type="button" class="reset-link">Start på nytt fra publiserte oppgaver</button></div>
+    </section>
+    <p class="page-width privacy-note">Lærerrommet har ingen innlogging. Alle kan åpne redigeringssiden, men bare noen med tilgang til ditt GitHub-prosjekt kan publisere endringer. Ikke skriv elevenes private opplysninger i oppgavene.</p>
+  </main>
+  <footer class="footer"><div class="page-width footer-inner"><span>kodeverkstedet. <span class="muted">/ lærerrommet</span></span><a href="index.html">Tilbake til elevsiden ↗</a></div></footer>
+  <div class="sr-only" id="announce" role="status" aria-live="polite"></div>
+</body>
+</html>
