@@ -1,0 +1,21 @@
+KODEVERKSTEDET – NY ANALOG FORKLARING (VERSJON 2)
+
+Dette er en interaktiv animert forklaring (HTML), IKKE en MP4-video.
+Med nettleserens norske talesyntese kan elevene få forklaringen lest opp.
+Hvis norsk stemme ikke er installert, kan dere følge forklaringen som tekst.
+
+INSTALLASJON:
+1. Pakk ut zip-filen.
+2. Åpne GitHub-repositoriet floridona91/Kodeverkstedet1.
+3. Last opp teori.html og analog-programmering-NY.html til hovedmappen.
+4. Commit changes.
+
+Åpne: https://floridona91.github.io/Kodeverkstedet1/teori.html#analog-video
+ELLER: https://floridona91.github.io/Kodeverkstedet1/analog-programmering-NY.html
+
+Slik bruker du:
+- Trykk Spill av. Nettleseren viser tilgjengelige stemmer.
+- Velg norsk bokmål/tale hvis den finnes (nb-NO eller no-NO).
+- Bruk Neste / Forrige, Pause og Fart ved behov.
+
+Merk: Når det ikke finnes en god norsk stemme på enheten, må en norsk stemme installeres i operativsystemet, eller det må produseres et eksternt, innlest lydspor. Videoen kan ikke garantere lik stemmekvalitet på alle enheter. Til undervisning er det best å teste på skole-PCene før publisering.
