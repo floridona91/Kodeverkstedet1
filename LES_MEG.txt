@@ -1,21 +1,17 @@
-KODEVERKSTEDET – NY ANALOG FORKLARING (VERSJON 2)
+KODEVERKSTEDET – TYDELIG STARTKNAPP FOR ANIMERT FORKLARING
 
-Dette er en interaktiv animert forklaring (HTML), IKKE en MP4-video.
-Med nettleserens norske talesyntese kan elevene få forklaringen lest opp.
-Hvis norsk stemme ikke er installert, kan dere følge forklaringen som tekst.
+Viktig: Dette er en interaktiv HTML-presentasjon, ikke en MP4-video.
 
-INSTALLASJON:
-1. Pakk ut zip-filen.
-2. Åpne GitHub-repositoriet floridona91/Kodeverkstedet1.
-3. Last opp teori.html og analog-programmering-NY.html til hovedmappen.
-4. Commit changes.
+Slik åpner du:
+1. Åpne analog-programmering-NY.html i Chrome eller Edge.
+2. Klikk den grønne knappen «Start forklaringen».
+3. Hvis stemmen er utydelig, velg annen stemme i menyen «STEMME». Eller velg «Start uten lyd».
+4. Bruk «Neste», «Forrige» og «Pause» for å styre presentasjonen.
 
-Åpne: https://floridona91.github.io/Kodeverkstedet1/teori.html#analog-video
-ELLER: https://floridona91.github.io/Kodeverkstedet1/analog-programmering-NY.html
+På GitHub:
+1. Gå til https://github.com/floridona91/Kodeverkstedet1
+2. Last opp teori.html og analog-programmering-NY.html, og Commit changes.
+3. Besøk https://floridona91.github.io/Kodeverkstedet1/teori.html#analog-video
+4. Trykk den grønne startknappen inne i rammen.
 
-Slik bruker du:
-- Trykk Spill av. Nettleseren viser tilgjengelige stemmer.
-- Velg norsk bokmål/tale hvis den finnes (nb-NO eller no-NO).
-- Bruk Neste / Forrige, Pause og Fart ved behov.
-
-Merk: Når det ikke finnes en god norsk stemme på enheten, må en norsk stemme installeres i operativsystemet, eller det må produseres et eksternt, innlest lydspor. Videoen kan ikke garantere lik stemmekvalitet på alle enheter. Til undervisning er det best å teste på skole-PCene før publisering.
+Hvis du ønsker en faktisk MP4-video med god og identisk norsk stemme på alle enheter, må det produseres et separat lydspor med en kvalitetssikret norsk stemme/innspilling. Dette er en alternativ interaktiv presentasjon.

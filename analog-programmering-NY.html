@@ -20,10 +20,26 @@
  .arrowline span{width:calc((100vw - 65px)/5);height:65px;font-size:30px}
  .note{line-height:1.6}
 }
+
+/* Tydelig startskjerm – også når siden brukes i et iframe på mobil. */
+.stage{position:relative}
+.welcome{position:absolute;z-index:9;inset:0;background:linear-gradient(130deg,rgba(244,252,239,.98),rgba(216,239,225,.97));display:flex;align-items:flex-start;flex-direction:column;justify-content:center;gap:13px;padding:clamp(22px,5vw,55px);text-align:left}
+.welcome[hidden]{display:none!important}
+.welcome-tag{letter-spacing:.13em;font-size:12px;font-weight:900;color:#267b60}
+.welcome h2{font-size:clamp(30px,4.4vw,55px);line-height:1.09;margin:0;letter-spacing:-.045em;color:#143c32}
+.welcome h2 em{font-style:normal;color:#2f8667}
+.welcome p{font-size:clamp(15px,1.8vw,21px);line-height:1.55;max-width:680px;margin:0;color:#315d4e}
+.welcome-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.welcome-buttons button{cursor:pointer;border-radius:14px;min-height:56px;padding:14px 22px;font-size:17px;font-weight:850;border:2px solid #1b7058}
+.welcome-buttons .start-main{background:#15674f;color:white;box-shadow:0 7px 18px #2d76543a}
+.welcome-buttons .start-muted{background:#fffdf6;color:#155842}
+.welcome-buttons button:hover{filter:brightness(.94)}
+.welcome small{color:#4c7362;font-size:12px;line-height:1.55;max-width:650px}
+@media(max-width:600px){.welcome{padding:24px 19px;gap:10px}.welcome h2{font-size:32px}.welcome p{font-size:14px}.welcome-buttons{flex-direction:column;width:100%;gap:8px}.welcome-buttons button{width:100%;min-height:48px;font-size:15px;padding:10px}.welcome small{font-size:11px}}
 </style></head>
 <body><main class="shell" aria-label="Interaktiv forklaringsvideo om analog programmering">
 <section class="playfield" id="playfield">
-<div class="stage"><div class="topbar"><div class="wordmark">KODEVERKSTEDET • MINIFORELESNING</div><div class="timecode" id="timecode">00:00 / ca. 02:55</div></div>
+<div class="stage"><div class="welcome" id="welcome" role="group" aria-label="Start animert forklaring"><span class="welcome-tag">KODEVERKSTEDET • NORSK FORKLARING</span><h2>Analog programmering<br><em>med Koda</em></h2><p>En animert introduksjon for 1.–4. trinn. Lær om algoritmer, rutenett, feilsøking og overgangen til Scratch.</p><div class="welcome-buttons"><button type="button" id="start" class="start-main">▶ Start forklaringen</button><button type="button" id="startSilent" class="start-muted">Start uten lyd</button></div><small>Ca. 3 minutter · 13 korte deler · Norsk tekst · Du kan pause og velge stemme nedenfor.</small></div><div class="topbar"><div class="wordmark">KODEVERKSTEDET • MINIFORELESNING</div><div class="timecode" id="timecode">00:00 / ca. 02:55</div></div>
 <div class="maintext"><span class="eyebrow" id="eyebrow">ANALOG PROGRAMMERING</span><h1 id="title">Analog programmering</h1><div id="visual" class="visual"></div></div>
 <div class="portrait"><span class="koda-stars" aria-hidden="true">✦</span>
 <svg class="koda" viewBox="0 0 340 420" role="img" aria-label="Koda – tegnet lærer med briller og grønne klær" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +81,9 @@ function speakSentence(sentenceIdx){if(!active||silentMode||!synth)return;const 
 function startScene(){cancelVoice();elapsed=0;drawScene();if(!active)return;if(silentMode||!synth){$('subtitle').textContent=scenes[idx].text;return;}speakSentence(0);}
 function advance(){if(!active)return;if(idx>=scenes.length-1){cancelVoice();finish();$('subtitle').textContent='Ferdig! Prøv aktiviteten i klassen.';return;}idx++;startScene();}
 function play(){if(paused&&synth&&!silentMode){try{synth.resume()}catch(e){}}else{paused=false;}active=true;$('playfield').classList.add('playing');$('play').textContent='Ⅱ Pause';kickTicker();if(!currentUtterance||silentMode)startScene();}
-$('play').addEventListener('click',()=>{if(active){pause()}else{play();}});
+$('start').addEventListener('click',()=>{$('welcome').hidden=true;play();});
+$('startSilent').addEventListener('click',()=>{$('welcome').hidden=true;silentMode=true;note('Spilles uten lyd. Følg norsk tekst og animasjoner.',false);play();});
+$('play').addEventListener('click',()=>{$('welcome').hidden=true;if(active){pause()}else{play();}});
 $('back').addEventListener('click',()=>{idx=Math.max(0,idx-1);const wasPlaying=active;if(paused)paused=false;if(wasPlaying){startScene()}else{cancelVoice();drawScene();}});
 $('next').addEventListener('click',()=>{idx=Math.min(scenes.length-1,idx+1);const wasPlaying=active;if(paused)paused=false;if(wasPlaying){startScene()}else{cancelVoice();drawScene();}});
 $('voice').addEventListener('change',()=>{if(active)startScene();});
